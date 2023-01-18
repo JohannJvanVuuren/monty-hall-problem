@@ -1,0 +1,51 @@
+.hall {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+
+  .door {
+    border-radius: 5px;
+    height: 25rem;
+    width: 15rem;
+    border: 1px solid brown;
+
+    .door-closed {
+      height: 100%;
+      width: auto;
+      z-index: 5;
+      background-color: saddlebrown;
+      position: relative;
+      transform-origin: left;
+      transition: all 0.5s ease-in-out ;
+
+      &.open {
+        transform: perspective(120rem) rotateY(-105deg);
+
+      }
+
+      .door-knob {
+        height: 15px;
+        width: 15px;
+        background-color: silver;
+        border-radius: 50%;
+        padding-left: 5px;
+        position: absolute;
+        right: 5px;
+        top: 9rem;
+
+      }
+
+      .door-open {
+        z-index: -5;
+        background-color: burlywood;
+      }
+    }
+
+  }
+
+
+
+}
+

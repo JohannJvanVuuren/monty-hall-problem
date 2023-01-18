@@ -1,3 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,900&display=swap");
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: burlywood;
+  font-family: "Lato", Arial, sans-serif;
+}
+
+.hall {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+.hall .door {
+  border-radius: 5px;
+  height: 25rem;
+  width: 15rem;
+  border: 1px solid brown;
+}
+.hall .door .door-closed {
+  height: 100%;
+  width: auto;
+  z-index: 5;
+  background-color: saddlebrown;
+  position: relative;
+  transform-origin: left;
+  transition: all 0.5s ease-in-out;
+}
+.hall .door .door-closed.open {
+  transform: perspective(120rem) rotateY(-105deg);
+}
+.hall .door .door-closed .door-knob {
+  height: 15px;
+  width: 15px;
+  background-color: silver;
+  border-radius: 50%;
+  padding-left: 5px;
+  position: absolute;
+  right: 5px;
+  top: 9rem;
+}
+.hall .door .door-closed .door-open {
+  z-index: -5;
+  background-color: burlywood;
+}
 
 /*# sourceMappingURL=main.css.map */
