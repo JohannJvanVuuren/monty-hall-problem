@@ -29,6 +29,16 @@ body {
   height: 25rem;
   width: 15rem;
   border: 1px solid brown;
+  position: relative;
+}
+.hall .door .image-win {
+  z-index: -10;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: auto;
 }
 .hall .door .door-closed {
   height: 100%;
@@ -39,22 +49,13 @@ body {
   transform-origin: left;
   transition: all 0.5s ease-in-out;
 }
-.hall .door .door-closed.open {
-  transform: perspective(120rem) rotateY(-105deg);
-}
-.hall .door .door-closed .door-knob {
-  height: 15px;
-  width: 15px;
+.hall .door .door-closed .doorknob {
   background-color: silver;
-  border-radius: 50%;
-  padding-left: 5px;
-  position: absolute;
-  right: 5px;
-  top: 9rem;
+  height: 10px;
+  width: 10px;
 }
-.hall .door .door-closed .door-open {
-  z-index: -5;
-  background-color: burlywood;
+.hall .door .open {
+  transform: perspective(120rem) rotateY(-105deg);
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -10,6 +10,17 @@
     height: 25rem;
     width: 15rem;
     border: 1px solid brown;
+    position: relative;
+
+    .image-win {
+      z-index: -10;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70%;
+      height: auto
+    }
 
     .door-closed {
       height: 100%;
@@ -20,30 +31,24 @@
       transform-origin: left;
       transition: all 0.5s ease-in-out ;
 
-      &.open {
-        transform: perspective(120rem) rotateY(-105deg);
-
-      }
-
-      .door-knob {
-        height: 15px;
-        width: 15px;
+      .doorknob {
         background-color: silver;
-        border-radius: 50%;
-        padding-left: 5px;
-        position: absolute;
-        right: 5px;
-        top: 9rem;
-
-      }
-
-      .door-open {
-        z-index: -5;
-        background-color: burlywood;
+        height: 10px;
+        width: 10px;
       }
     }
 
+    .open {
+      transform: perspective(120rem) rotateY(-105deg);
+    }
+
   }
+
+
+
+
+
+
 
 
 
