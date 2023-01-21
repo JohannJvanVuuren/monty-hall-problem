@@ -10,28 +10,31 @@ const Hall = () => {
 
     //Generates random numbers between 1 and 3 (incl) to determine where the treasure will be hidden
     const generateRandomNumber = () => {
-        return (Math.random() * 3) + 1;
+        return Math.floor(Math.random() * 3) + 1;
     }
 
-    const treasureDoor = generateRandomNumber();
+    let treasureDoor = generateRandomNumber();
 
 
     return (
         <div className={"hall"}>
             <Door
+                doorId={1}
                 isActive={activeIndex === 0}
                 onShow={() => setActiveIndex(0)}
-                revealTreasure={activeIndex === treasureDoor}
+                revealTreasure={treasureDoor}
             />
             <Door
+                doorId={2}
                 isActive={activeIndex === 1}
                 onShow={() => setActiveIndex(1)}
-                revealTreasure={activeIndex === treasureDoor}
+                revealTreasure={treasureDoor}
             />
             <Door
+                doorId={3}
                 isActive={activeIndex === 2}
                 onShow={() => setActiveIndex(2)}
-                revealTreasure={activeIndex === treasureDoor}
+                revealTreasure={treasureDoor}
             />
         </div>
     )

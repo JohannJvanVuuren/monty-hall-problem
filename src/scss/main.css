@@ -31,7 +31,8 @@ body {
   border: 1px solid brown;
   position: relative;
 }
-.hall .door .image-win {
+.hall .door .image-win,
+.hall .door .image-lose {
   z-index: -10;
   position: absolute;
   top: 50%;
@@ -49,10 +50,15 @@ body {
   transform-origin: left;
   transition: all 0.5s ease-in-out;
 }
-.hall .door .door-closed .doorknob {
+.hall .door .door-closed .door-knob {
   background-color: silver;
-  height: 10px;
-  width: 10px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 10rem;
+  right: 0.5rem;
+  z-index: 10;
 }
 .hall .door .open {
   transform: perspective(120rem) rotateY(-105deg);

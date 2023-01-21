@@ -12,7 +12,8 @@
     border: 1px solid brown;
     position: relative;
 
-    .image-win {
+    .image-win,
+    .image-lose {
       z-index: -10;
       position: absolute;
       top: 50%;
@@ -31,10 +32,15 @@
       transform-origin: left;
       transition: all 0.5s ease-in-out ;
 
-      .doorknob {
+      .door-knob {
         background-color: silver;
-        height: 10px;
-        width: 10px;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        position: absolute;
+        top: 10rem;
+        right: 0.5rem;
+        z-index: 10;
       }
     }
 
