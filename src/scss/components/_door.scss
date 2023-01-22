@@ -30,7 +30,7 @@
       background-color: saddlebrown;
       position: relative;
       transform-origin: left;
-      transition: all 0.5s ease-in-out ;
+      transition: all 0.5s ease-in-out;
 
       .door-knob {
         background-color: silver;
@@ -41,7 +41,13 @@
         top: 10rem;
         right: 0.5rem;
         z-index: 10;
+
       }
+
+      .selected {
+        background-color: green;
+      }
+
     }
 
     .open {
@@ -49,13 +55,6 @@
     }
 
   }
-
-
-
-
-
-
-
 
 
 }

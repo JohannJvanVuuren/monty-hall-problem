@@ -5,6 +5,7 @@ import '../scss/main.css';
 const Hall = () => {
 
     const [activeIndex, setActiveIndex] = useState(0);
+    const [selectedIndex, setSelectedIndex] = useState(0);
 
     // const [treasure, setTreasure] = useState(false);
 
@@ -27,22 +28,26 @@ const Hall = () => {
             <Door
                 doorId={1}
                 isActive={activeIndex === 1}
-                onSelect={() => console.log(`Door 1 selected.`)}
                 onShow={() => setActiveIndex(1)}
+                isSelected={ selectedIndex === 1}
+                onSelect={() => setSelectedIndex(1)}
+
                 revealTreasure={treasureDoor}
             />
             <Door
                 doorId={2}
                 isActive={activeIndex === 2}
-                onSelect={() => console.log(`Door 2 selected.`)}
                 onShow={() => setActiveIndex(2)}
+                isSelected={ selectedIndex === 2}
+                onSelect={() => setSelectedIndex(2)}
                 revealTreasure={treasureDoor}
             />
             <Door
                 doorId={3}
                 isActive={activeIndex === 3}
-                onSelect={() => console.log(`Door 3 selected.`)}
                 onShow={() => setActiveIndex(3)}
+                isSelected={ selectedIndex === 3}
+                onSelect={() => setSelectedIndex(3)}
                 revealTreasure={treasureDoor}
             />
         </div>

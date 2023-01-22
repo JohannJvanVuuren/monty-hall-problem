@@ -3,14 +3,12 @@ import noTreasure from '../scss/images/no-treasure.jpg'
 import potOfGold from '../scss/images/goldpot.jpg';
 
 
-const Door = ({isActive, onShow, revealTreasure, doorId, onSelect}) => {
+const Door = ({isActive, onShow, revealTreasure, doorId, isSelected, onSelect}) => {
 
     /* Using the prop isActive to decide which door to open. */
     const doorOpen = isActive ? "door-closed open" : "door-closed";
+    const doorKnob = isSelected ? "door-knob selected" : "door-knob";
 
-    const handleFirstClick = () => {
-
-    }
 
     return (
         <div className={"door"}>
@@ -24,7 +22,7 @@ const Door = ({isActive, onShow, revealTreasure, doorId, onSelect}) => {
             )}
 
             <div className={doorOpen} onClick={onSelect} onDoubleClick={onShow}>
-                <div className={"door-knob"} ></div>
+                <div className={doorKnob} ></div>
             </div>
 
         </div>

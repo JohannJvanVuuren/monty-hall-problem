@@ -60,6 +60,9 @@ body {
   right: 0.5rem;
   z-index: 10;
 }
+.hall .door .door-closed .selected {
+  background-color: green;
+}
 .hall .door .open {
   transform: perspective(120rem) rotateY(-105deg);
 }
