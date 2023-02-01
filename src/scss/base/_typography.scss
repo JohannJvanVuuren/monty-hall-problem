@@ -1,0 +1,28 @@
+// The typography for the whole page. Since minimal typography is present on the page, the elements were selected
+// by element name and not class selectors.
+h1,
+h2 {
+  font-size: 5rem;
+  text-align: center;
+  padding-top: 2rem;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  color: #03002c;
+}
+
+h2 {
+  color: #800000;
+}
+
+p {
+  color: #800000;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+// The styling for all three buttons were identical.
+button {
+  text-transform: uppercase;
+  font-weight: 900;
+  background: #03002c;
+  color: #c0c0c0;
+}

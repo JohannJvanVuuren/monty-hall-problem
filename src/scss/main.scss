@@ -1,6 +1,11 @@
+// Import of Google Fonts 'Lato" font.
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,900&display=swap');
 
+//Import of modular SCSS files. 7:1 Architecture used.
 @import 'base/reset';
+@import 'base/typography';
 
 @import 'components/door';
+
+@import 'layout/doors';
+@import 'layout/hall';

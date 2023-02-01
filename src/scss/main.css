@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,900&display=swap");
 *,
 ::after,
 ::before {
@@ -17,18 +16,66 @@ body {
   font-family: "Lato", Arial, sans-serif;
 }
 
+h1,
+h2 {
+  font-size: 5rem;
+  text-align: center;
+  padding-top: 2rem;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  color: #03002c;
+}
+
+h2 {
+  color: #800000;
+}
+
+p {
+  color: #800000;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+button {
+  text-transform: uppercase;
+  font-weight: 900;
+  background: #03002c;
+  color: #c0c0c0;
+}
+
+.hall .door {
+  border-radius: 5px;
+  border: 5px solid #2b1d0e;
+}
+.hall .door .door-closed,
+.hall .door .door-winning {
+  background-color: saddlebrown;
+  transform-origin: left;
+  transition: all 0.5s ease-in-out;
+}
+.hall .door .door-closed .door-knob,
+.hall .door .door-winning .door-knob {
+  background-color: silver;
+  border-radius: 50%;
+}
+.hall .door .door-closed .selected,
+.hall .door .door-winning .selected {
+  background-color: green;
+}
+.hall .door .open,
+.hall .door .open-winning {
+  transform: perspective(120rem) rotateY(-105deg);
+}
+
 .hall {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
 }
 .hall .door {
-  border-radius: 5px;
   height: 25rem;
   width: 15rem;
-  border: 1px solid brown;
   position: relative;
 }
 .hall .door .image-win,
@@ -41,30 +88,45 @@ body {
   width: 70%;
   height: auto;
 }
-.hall .door .door-closed {
+.hall .door .door-closed,
+.hall .door .door-winning {
   height: 100%;
   width: auto;
   z-index: 5;
-  background-color: saddlebrown;
   position: relative;
-  transform-origin: left;
-  transition: all 0.5s ease-in-out;
 }
-.hall .door .door-closed .door-knob {
-  background-color: silver;
+.hall .door .door-closed .door-knob,
+.hall .door .door-winning .door-knob {
   height: 20px;
   width: 20px;
-  border-radius: 50%;
   position: absolute;
   top: 10rem;
   right: 0.5rem;
   z-index: 10;
 }
-.hall .door .door-closed .selected {
-  background-color: green;
+
+.hall {
+  margin-top: -4rem;
+  height: 80vh;
 }
-.hall .door .open {
-  transform: perspective(120rem) rotateY(-105deg);
+
+p {
+  text-align: center;
+}
+
+.btn-container {
+  margin: -2rem 0 -4rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn-container .btn-primary {
+  padding: 2rem 5rem;
+}
+.btn-container .btn-secondary {
+  padding: 1.5rem 5rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
 }
 
 /*# sourceMappingURL=main.css.map */

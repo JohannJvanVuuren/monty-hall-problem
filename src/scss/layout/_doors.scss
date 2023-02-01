@@ -1,0 +1,48 @@
+// Flexbox was used to position the doors.
+.hall {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 90vh;
+  width: 100vw;
+
+  // Fixing the dimensions of the the outer div of the doors. I.e., the door frame.
+  // Setting position relative so the images inside this div can be centered.
+  .door {
+    height: 25rem;
+    width: 15rem;
+    position: relative;
+
+    //Centering and setting the images that appear behind each door.
+    .image-win,
+    .image-lose {
+      z-index: -10;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70%;
+      height: auto
+    }
+
+    // Setting the dimensions of the door to be 100% of the parent div so the door fits in the door frame.
+    // Setting position to relative so that the door knob div can be positioned using absolute positioning.
+    .door-closed,
+    .door-winning{
+      height: 100%;
+      width: auto;
+      z-index: 5;
+      position: relative;
+
+      // Positioning and sizing the door knob.
+      .door-knob {
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        top: 10rem;
+        right: 0.5rem;
+        z-index: 10;
+      }
+    }
+  }
+}
